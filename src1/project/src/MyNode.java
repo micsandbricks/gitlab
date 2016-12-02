@@ -11,7 +11,7 @@ public class MyNode {
   private MyNode left;
   private MyNode right;
   private int value;
-
+//comment by Cam 
   /**
    * Class constructor initializing this node's value.
    * 
