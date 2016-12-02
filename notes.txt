@@ -1,0 +1,23 @@
+Users in a git project can share data in a number of ways.
+In this lab, we have chosen to create an online repository on github.com.
+One of the users initialized the online rep., created a local folder, where they downloaded 
+the files, and finally pushed those files to the online repository.
+
+The other user then created a local repository, set their remote origin to the github url,
+and pulled down the files from the repository. The other user could also have used the 
+"git clone" command, along with the url, the get a full copy of the project along with
+all history and configuration information.
+
+"git pull" both fetches changes and merges them into the current branch of the user.
+It is possible to only fetch the changes without merging. We tried this by having
+Camilla add a comment to MyNode.java and pushing the changes to github. Martin then used the
+following command:
+"git fetch origin master"
+followed by
+"git log -p HEAD..FETCH_HEAD"
+to first get the changes and then checking the difference in comparison with his local copy.
+Martin also used the command
+"gitk HEAD...FETCH_HEAD" 
+to get a graphical interface that explains the differences between the reps. He then merged
+Camillas changes:
+"git merge origin master"
